@@ -22,7 +22,26 @@
     }
     &__left {
       font-size: 18px;
+      &--logout {
+        margin-left: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(65, 171, 236);
+        text-decoration: none
+      }
       &--lgn {
+        margin-left: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(65, 171, 236);
+        text-decoration: none
+      }
+      &--new {
+        margin-left: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(65, 171, 236);
+        text-decoration: none
+      }
+      &--post {
+        margin-left: 20px;
         font-family: Arial, Helvetica, sans-serif;
         color: rgb(65, 171, 236);
         text-decoration: none

@@ -2,11 +2,19 @@
 .header
   .header-top
     .header-top__right
-      = link_to '/' ,class: 'header-top__right--logo' do
+      = link_to 'root_path' ,class: 'header-top__right--logo' do
         4コマ
     .header-top__left
-      = link_to '/' ,class: 'header-top__left--lgn' do
-        ログイン
+      - if user_signed_in?
+        = link_to 'destroy_user_session_path', method: :delete ,class: 'header-top__left--logout' do
+          ログアウト
+      - else
+        = link_to new_user_session_path ,class: 'header-top__left--lgn' do
+          ログイン
+        = link_to new_user_registration_path ,class: 'header-top__left--new' do
+          新規登録
+      = link_to '/' ,class: 'header-top__left--post' do
+        投稿する
 .wrapper
   .main
     .main-contents
