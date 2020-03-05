@@ -22,6 +22,7 @@
   font-weight: normal;
   font-style: normal;
 }
+@import "modules/signup"
 @import "modules/posts";
 @import "font-awesome-sprockets";
 @import "font-awesome";
