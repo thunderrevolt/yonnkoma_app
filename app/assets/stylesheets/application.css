@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+@import "reset";
+@font-face {
+  font-family: "woff2";
+  src: url('https://cdn.leafscape.be/NovelPOP/novelpop_web.woff2')
+  format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@import "modules/posts";
+@import "font-awesome-sprockets";
+@import "font-awesome";
