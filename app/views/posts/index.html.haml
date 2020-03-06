@@ -26,7 +26,8 @@
             .new-content__img
               写真
             .new-content__title
-              = post.title
+              = link_to post_path(post.id), class: 'new-content__title--top' do
+                = post.title
             .new-content__user
               = post.user.name
 .fotter 
