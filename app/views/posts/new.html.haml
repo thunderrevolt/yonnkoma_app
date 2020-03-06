@@ -1,0 +1,7 @@
+.form
+  = form_with model: @post, class:"form-box", local: true do |f| 
+    %p タイトル
+    = f.text_field :title, class:"form-box__title", placeholder:"タイトルを入力"
+    %p テキスト
+    = f.text_field :text, class:"form-box__text", placeholder:"テキストを入力"
+    = f.submit '投稿する', class:"form-box__submit"

@@ -3,11 +3,11 @@
 }
 
 .header {
-  height: 80px;
+  height: 70px;
   width: 100vw;
   background-color: #f8d655;
   .header-top {
-    height: 80px;
+    height: 70px;
     margin: 0 200px;
     display: flex;
     justify-content: space-between;
@@ -53,6 +53,7 @@
 .wrapper {
   background-color: #ccc;
   height: calc(100vh - 80px);
+  overflow: scroll;
   .main-contents {
     widows: auto;
     margin: 0 200px;
@@ -64,6 +65,7 @@
     }
     .new-contents {
       display: flex;
+      flex-wrap: wrap;
       .new-content {
         height: 250px;
         width: 200px;

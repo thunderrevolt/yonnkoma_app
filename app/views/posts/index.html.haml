@@ -6,14 +6,14 @@
         4コマ
     .header-top__left
       - if user_signed_in?
-        = link_to 'destroy_user_session_path', method: :delete ,class: 'header-top__left--logout' do
+        = link_to destroy_user_session_path, method: :delete ,class: 'header-top__left--logout' do
           ログアウト
       - else
         = link_to new_user_session_path ,class: 'header-top__left--lgn' do
           ログイン
         = link_to new_user_registration_path ,class: 'header-top__left--new' do
           新規登録
-      = link_to '/' ,class: 'header-top__left--post' do
+      = link_to new_post_path ,class: 'header-top__left--post' do
         投稿する
 .wrapper
   .main
@@ -21,13 +21,14 @@
       %h1.main-new__title
         新着４コマ
       .new-contents
-        .new-content
-          .new-content__img
-            写真
-          .new-content__title
-            タイトル
-          .new-content__user
-            名前
+        - @posts.each do |post|
+          .new-content
+            .new-content__img
+              写真
+            .new-content__title
+              = post.title
+            .new-content__user
+              = post.user.name
 .fotter 
   .fotter-main
     %ul.fotter-main__list
