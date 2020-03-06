@@ -22,6 +22,7 @@
   font-weight: normal;
   font-style: normal;
 }
+@import "modules/post_show";
 @import "modules/signup";
 @import "modules/posts";
 @import "modules/post_new";
