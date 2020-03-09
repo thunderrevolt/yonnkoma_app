@@ -7,3 +7,18 @@
     .show-img
     .show-text
       = @post.text
+    .comment
+      - if current_user
+        = form_with model: [@post, @comment], class: "comment-form", local: true do |f|
+          = f.text_area :text, class: "comment-form__area", plsceholder: "コメントする", rows: "2"
+          = f.submit "SEND",class: "comment-form__btn"
+      - else
+        %strong
+          %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+    .comments
+      %h3 コメント一覧
+      - if @comments
+        - @comments.each do |comment|
+          %p.comments__text
+            = link_to comment.user.name, "/users/#{comment.user_id}"
+            = comment.text
