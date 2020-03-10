@@ -6,6 +6,8 @@
         4コマ
     .header-top__left
       - if user_signed_in?
+        = link_to "/users/#{current_user.id}" do
+          マイページ
         = link_to destroy_user_session_path, method: :delete ,class: 'header-top__left--logout' do
           ログアウト
       - else
@@ -29,7 +31,8 @@
               = link_to post_path(post.id), class: 'new-content__title--top' do
                 = post.title
             .new-content__user
-              = post.user.name
+              = link_to "/users/#{post.user.id}", class: 'new-content__title--top' do
+                = post.user.name
 .fotter 
   .fotter-main
     %ul.fotter-main__list

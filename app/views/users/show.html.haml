@@ -1,0 +1,10 @@
+.user-page
+  %p 
+    = @nickname + "さんの投稿一覧"
+  .user-contents
+    - @posts.each do |post|
+      .user-content
+        .user-content__title
+          = post.title
+        .user-content__text
+          = post.text
