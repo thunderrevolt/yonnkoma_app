@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.includes(:user).limit(10).order("created_at DESC")
+    @posts = Post.includes(:user,:boards).limit(10).order("created_at DESC")
   end
 
   def new
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @post_boads = @post.boads.all
+    @post_boards = @post.boards.all
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
   end

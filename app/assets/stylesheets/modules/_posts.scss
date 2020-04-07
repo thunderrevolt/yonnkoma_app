@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .header {
@@ -52,16 +53,17 @@
 
 .wrapper {
   background-color: #ccc;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 70px);
   overflow: scroll;
   .main-contents {
     widows: auto;
-    margin: 0 200px;
+    margin: 30px 200px;
     .main-new__title {
       font-size: 30px;
       font-weight: bold;
       font-family: Arial, Helvetica, sans-serif;
       color: #333;
+      margin-bottom: 10px;
     }
     .new-contents {
       display: flex;
@@ -70,6 +72,39 @@
         height: 250px;
         width: 200px;
         border: 0.5px solid #999;
+        &__title {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        &__user {
+          font-family: Arial, Helvetica, sans-serif;
+
+        }
+      }
+    }
+  }
+  .post-area {
+    bottom: 32px;
+    font-size: 22px;
+    height: 160px;
+    right: 32px;
+    width: 160px;
+    position: fixed;
+    text-align: center;
+    z-index: 10;
+    &__btn {
+      width: 150px;
+      height: 150px;
+      background-color: #f8d655;
+      border-radius: 50%;
+      border: solid 3px #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &--name {
+        text-decoration: none;
+        font-size: 50px;
+        font-family: "woff2", Arial, Helvetica, sans-serif;
+        color: rgb(65, 171, 236);
       }
     }
   }
@@ -82,6 +117,7 @@
     height: 50px;
     width: 100%;
     .fotter-main__list {
+      list-style: none;
       height: 50px;
       display: flex;
       align-items: center;

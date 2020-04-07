@@ -1,13 +1,17 @@
 .show
   .show-box
     .show-author
-      = @post.user.name
+      投稿者: #{@post.user.name}
     .show-title
-      = @post.title
+      タイトル: #{@post.title}
+      タイトル: #{@post.text}
     .show-img
+      - @post_boards.each do |i|
+        = image_tag i.images.to_s, width: "500px", height: "500px", width: "600px"
     .show-text
-      = @post.text
+      説明文: #{@post.text}
     .comment
+      %p ここからコメント入力できます。
       - if current_user
         = form_with model: [@post, @comment], class: "comment-form", local: true do |f|
           = f.text_area :text, class: "comment-form__area", plsceholder: "コメントする", rows: "2"
