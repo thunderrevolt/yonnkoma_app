@@ -35,7 +35,7 @@
                 投稿者: #{post.user.name}
   - if user_signed_in?
     .post-area
-      = link_to new_post_path, class:'post-area__link' do
+      = link_to new_post_path, class:'post-area__link', data: {turbolinks: false} do
         .post-area__btn
           .post-area__btn--name 執筆
 .fotter 

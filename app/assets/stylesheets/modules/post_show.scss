@@ -9,3 +9,12 @@
     margin: 0 200px;
   }
 }
+
+.show-img {
+  width: auto;
+  height: auto;
+  .show-img__img {
+    border: 5px solid #333;
+    object-fit: contain;
+  }
+}
