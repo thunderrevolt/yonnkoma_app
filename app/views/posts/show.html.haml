@@ -7,7 +7,8 @@
       タイトル: #{@post.text}
     .show-img
       - @post_boards.each do |i|
-        = image_tag i.images.to_s, width: "500px", height: "500px", width: "600px"
+        = image_tag i.images.to_s, class: "show-img__img"
+        -# = image_tag i.images.to_s, width: "500px", height: "500px", width: "600px", class: "show-img__img"
     .show-text
       説明文: #{@post.text}
     .comment
@@ -19,6 +20,15 @@
       - else
         %strong
           %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+    - if user_signed_in?
+      - if @post.user_id == current_user.id
+        .product-show-link
+          .product-show-link__edit
+            = link_to edit_post_path(@post), data: {turbolinks: false} do
+              編集
+          .product-show-link__destroy
+            = link_to post_path(@post), method: :delete do
+              削除
     .comments
       %h3 コメント一覧
       - if @comments

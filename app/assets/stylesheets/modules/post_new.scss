@@ -9,20 +9,131 @@ p {
   background-color: #eee;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
   .post-main {
     height: 100%;
-    width: auto;
-    padding: 20px 500px;
-    .__container {
+    width: 600px;
+    padding: 20px auto;
+    &__container {
       height: 100%;
+      padding:  20px;
       #post-container {
-        height: auto;
+        width: 600px;
         background-color: white;
-        .form-box__title {
-          width: 300px;
-          height: 40px;
+        .post-new-header {
+          font-family: "woff2", Arial, Helvetica, sans-serif;
+          font-size: 40px;
+          color: rgb(65, 171, 236);
+          text-decoration: none;
+          text-align: center;
+          padding: 20px;
+        }
+        .form-box {
+          padding: 20px;
+          &__name {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+          }
+          &__name--text {
+            height: 20x;
+            width: 300px;
+            margin-bottom: 50px;
+          }
+          &__img {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+          }
+          #image-box-1 {
+            .post-image__area {
+              display: none;
+            }
+            .fa-marker {
+              line-height: 106px;
+              font-size: 30px;
+              color: #41ABEC;
+              padding: 20px;
+              cursor: pointer;
+            }
+          }
+          &__text-header {
+            margin-bottom: 10px;
+          }
+          &__text {
+            height: 50px;
+            width: 300px;
+          }
+          &__submit {
+            height: 50px;
+            cursor: pointer;
+          }
+          .top-remove {
+            text-align: right;
+            display: block;
+            text-decoration: none;
+            color: #333;
+          }
         }
       }
     }
+  }
+}
+
+// 必須ボタン
+.need {
+  background-color: #f8d655;
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 5px;
+}
+
+// プレビュー画像
+.item-image {
+  margin: 5px;
+  height: 135px;
+  width: 114px;
+  & img {
+    object-fit: cover;
+  }
+  &__operetion{
+    height: 35px;
+    &--delete {
+      color: white;
+      background-color: #41ABEC;
+      line-height: 35px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}
+
+// 編集
+.js-file_group, .hidden-destroy{
+  font-size: 0;
+  display: none;
+  }
+.fa-marker {
+  line-height: 106px;
+  font-size: 30px;
+  color: #41ABEC;
+  padding: 20px;
+  cursor: pointer;
+}
+.image_box {
+  margin: 5px;
+  height: 135px;
+  width: 114px;
+  & img {
+    object-fit: cover;
+  }
+  .js_remove__btn {
+    color: white;
+    height: 35px;
+    background-color: #41ABEC;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
   }
 }

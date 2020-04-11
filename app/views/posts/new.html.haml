@@ -2,26 +2,25 @@
   %main.post-main
     %section.post-main__container
       #post-container
+        .post-new-header ４コマ投稿ページ
+        
         = form_with model: @post, class:"form-box", local: true do |f| 
-          %p タイトル
-          = f.text_field :title, class:"form-box__title", placeholder:"タイトルを入力"
-          %p ４コマ画像を添付してください
-          %span.require 必須
-          .post-drop-box
-            .preview-content
-            .label-content
-              %label{for: "item_images_attributes_0_image", class: "label-box", id: "label-box--0"}
-                %pre.label-box-text クリックしてファイルをアップロード
-            .hidden-content
-              = f.fields_for :boards do |i|
-                = i.file_field :images, multiple: true, type: 'file', name: "boards[images][]"
-              -# = f.fields_for :boards, class:"form-box__img" do |i|
-                -# = i.file_field :image, multiple: true, class: "hidden-field", style: 'display: none;'
-                -# %input{class:"hidden-field", type: "file", name: "board[images_attributes][1][images]", id: "board_images_attributes_1_image" }
-                -# %input{class:"hidden-field", type: "file", name: "board[images_attributes][2][images]", id: "board_images_attributes_2_image" }
-                -# %input{class:"hidden-field", type: "file", name: "board[images_attributes][3][images]", id: "board_images_attributes_3_image" }
-                -# %input{class:"hidden-field", type: "file", name: "board[images_attributes][4][images]", id: "board_images_attributes_4_image" }
-
-          %p テキスト
+          .form-box__name
+            %p 投稿タイトル
+            %span.need 必須
+          = f.text_field :title, class:"form-box__name--text", placeholder:"タイトルを入力"
+          .form-box__img
+            %p 投稿画像
+            %span.need 必須
+          %p ペンアイコンをクリックして最大4枚までアップロードできます
+          = f.fields_for :boards do |i|
+            #image-box-1
+              %label#image-box__container.item-num-0
+                = i.file_field :images, multiple: true, class: "post-image__area", type: 'file', name: "boards[images][]", value:"",  id:"img-file"
+                %i.fas.fa-marker
+          .form-box__text-header
+            %p テキスト
           = f.text_field :text, class:"form-box__text", placeholder:"テキストを入力"
           = f.submit '投稿する', class:"form-box__submit"
+          = link_to root_path ,class: 'top-remove' do
+            TOPにもどる
