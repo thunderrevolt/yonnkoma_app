@@ -8,10 +8,13 @@
 # 誰でも気軽に４コママンガを閲覧&投稿しよう
 
 App名 ４コマ
+
 [Heroku](https://yonnkoma-app.herokuapp.com/)でアプリをチェックできます！
 
 テストアカウント 
+
 ニックネーム test
+
 パスワード aaaaaa (aが6文字)
 
 トップページ
