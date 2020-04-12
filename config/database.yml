@@ -48,7 +48,5 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: yonnkoma_app_production
-  username: yonnkoma_app
-  password: <%= ENV['YONNKOMA_APP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  database: db_production
