@@ -6,27 +6,28 @@ https://img.shields.io/github/languages/code-size/thunderrevolt/yonnkoma_app
 
 ＃誰でも気軽に４コママンガを閲覧&投稿しよう
 
-[Heroku]（https://yonnkoma-app.herokuapp.com/）でアプリをチェックできます！
+[Heroku](https://yonnkoma-app.herokuapp.com/)でアプリをチェックできます！
 
-！[画像(ヘッダー)]（https://user-images.githubusercontent.com/61190252/79065597-9d376200-7cec-11ea-8450-e284b623caf2.png）
-！[画像(投稿画面)]（https://user-images.githubusercontent.com/61190252/79065858-7a0db200-7cee-11ea-8c9a-06405d977184.png）
+![画像(ヘッダー)](https://user-images.githubusercontent.com/61190252/79065597-9d376200-7cec-11ea-8450-e284b623caf2.png)
 
-1. [概要]（＃概要）
-1. [環境]（＃環境）
-1. [使用言語]（＃使用言語）
-1. [今後の機能]（＃Future％20features）
+![画像(投稿画面)](https://user-images.githubusercontent.com/61190252/79065858-7a0db200-7cee-11ea-8c9a-06405d977184.png)
+
+1. [概要](# 概要)
+1. [環境](# 環境)
+1. [使用言語](# 使用言語）
+1. [今後の機能](# 今後の機能）
 
 
-＃ 概要
+# 概要
 
 気軽に、いつでも、どんな時も４コママンガを読むことができます。
 さらに、自分で書いた４コママンガを簡単に投稿することができます。
 
-＃環境
+# 環境
 
 このガイドに従って、環境などを設定してください。
 
-##データベース
+## データベース
 #### usrsテーブル(ユーザー)
 |Column|Type|Options|
 |------|----|-------|
@@ -99,12 +100,12 @@ $ rails db:create
 $ rails db:migrate
 「」
 
-＃使用言語
+# 使用言語
 
 このソフトウェアは、次のオープンソースパッケージを使用します。
 ！[画像]（https://user-images.githubusercontent.com/61190252/79066524-77618b80-7cf3-11ea-9a48-a11e88ed4e4c.png）
 
-＃今後の機能
+# 今後の機能
 
 App内
 -[]管理者機能
