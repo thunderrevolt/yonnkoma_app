@@ -46,7 +46,7 @@
 |------|----|-------|
 |title|string|null: false|
 |text|text||
-|user_idinteger|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 #### Association
 - belongs_to :user
 - has_many :comments, dependent: :destroy
@@ -112,11 +112,11 @@ $ rails db:migrate
 # 今後の機能
 
 App内
-- [] 管理者機能
-- [] お気に入り機能
-- [] Twitter拡散機能
+- [ ] 管理者機能
+- [ ] お気に入り機能
+- [ ] Twitter拡散機能
 
 環境
-- [] Docker導入
-- [] CircleCI導入
+- [ ] Docker導入
+- [ ] CircleCI導入
 
