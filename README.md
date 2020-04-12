@@ -1,10 +1,11 @@
 
 https://img.shields.io/github/forks/thunderrevolt/yonnkoma_app?style=social
+
 https://img.shields.io/github/languages/code-size/thunderrevolt/yonnkoma_app
 
 **これは、私がプログラミングを学び初めて作ったAppです！！！。**
 
-＃誰でも気軽に４コママンガを閲覧&投稿しよう
+# 誰でも気軽に４コママンガを閲覧&投稿しよう
 
 [Heroku](https://yonnkoma-app.herokuapp.com/)でアプリをチェックできます！
 
@@ -12,10 +13,10 @@ https://img.shields.io/github/languages/code-size/thunderrevolt/yonnkoma_app
 
 ![画像(投稿画面)](https://user-images.githubusercontent.com/61190252/79065858-7a0db200-7cee-11ea-8c9a-06405d977184.png)
 
-1. [概要](# 概要)
-1. [環境](# 環境)
-1. [使用言語](# 使用言語）
-1. [今後の機能](# 今後の機能）
+1. [概要](#概要)
+1. [環境](#環境)
+1. [使用言語](#使用言語)
+1. [今後の機能](#今後の機能)
 
 
 # 概要
@@ -72,33 +73,33 @@ https://img.shields.io/github/languages/code-size/thunderrevolt/yonnkoma_app
 
 1.このリポジトリを複製する
 
-`` `bash
+```
 $ git clone https://github.com/thunderrevolt/yonnkoma_app.git
-「」
+```
 
 2.リポジトリに移動します
 
-`` `bash
+```bash
 $ cd yonnkoma_app
-「」
+```
 
 3.依存関係をインストールする
 
-`` `bash
+```bash
 $ bundle install
-「」
+```
 
 4.データベースの作成
 
-`` `bash
+```bash
 $ rails db:create
-「」
+```
 
 5.データベース構造変更
 
-`` `bash
+```bash
 $ rails db:migrate
-「」
+```
 
 # 使用言語
 
