@@ -1,7 +1,7 @@
 
-https://img.shields.io/github/forks/thunderrevolt/yonnkoma_app?style=social
+![color:ff69b4](https://img.shields.io/github/forks/thunderrevolt/yonnkoma_app?style=social)
 
-https://img.shields.io/github/languages/code-size/thunderrevolt/yonnkoma_app
+![color:ff69b4](https://img.shields.io/github/languages/code-size/thunderrevolt/yonnkoma_app)
 
 **これは、私がプログラミングを学び初めて作ったAppです！！！。**
 
@@ -12,6 +12,8 @@ https://img.shields.io/github/languages/code-size/thunderrevolt/yonnkoma_app
 ![画像(ヘッダー)](https://user-images.githubusercontent.com/61190252/79065597-9d376200-7cec-11ea-8450-e284b623caf2.png)
 
 ![画像(投稿画面)](https://user-images.githubusercontent.com/61190252/79065858-7a0db200-7cee-11ea-8c9a-06405d977184.png)
+
+# 目次
 
 1. [概要](#概要)
 1. [環境](#環境)
@@ -104,16 +106,17 @@ $ rails db:migrate
 # 使用言語
 
 このソフトウェアは、次のオープンソースパッケージを使用します。
-！[画像]（https://user-images.githubusercontent.com/61190252/79066524-77618b80-7cf3-11ea-9a48-a11e88ed4e4c.png）
+
+![画像](https://user-images.githubusercontent.com/61190252/79066524-77618b80-7cf3-11ea-9a48-a11e88ed4e4c.png)
 
 # 今後の機能
 
 App内
--[]管理者機能
--[]お気に入り機能
--[]Twitter拡散機能
+- [] 管理者機能
+- [] お気に入り機能
+- [] Twitter拡散機能
 
 環境
--[]Docker導入
--[]CircleCI導入
+- [] Docker導入
+- [] CircleCI導入
 
