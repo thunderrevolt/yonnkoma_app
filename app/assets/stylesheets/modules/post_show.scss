@@ -2,19 +2,184 @@
   overflow: scroll;
   height: 100vh;
   width: 100vw;
-  background-color: lavender;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
   .show-box {
     width: 600px;
     height: 100%;
-    margin: 0 200px;
+    margin: 0 auto;
+    .show-box-inner {
+      padding: 20px;
+      &__author {
+        font-size: 24px;
+      }
+      // タイトル
+      &__title {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+      // ４コマ画像
+      &__img {
+        text-align: center;
+        width: auto;
+        height: auto;
+        &--img {
+          object-fit: contain;
+        }
+      }
+      &__text {
+        font-size: 24px;
+      }
+    }
   }
 }
 
-.show-img {
-  width: auto;
-  height: auto;
-  .show-img__img {
-    border: 5px solid #333;
-    object-fit: contain;
+// 編集ボタン・削除ボタン
+.product-show-link {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  &__edit {
+    margin-left: 50px;
+    font-size: 20px;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #41ABEC;
+    border-radius: 10px;
+    &:hover {
+      background-color: rgba(60, 201, 206, 0.488);
+    }
   }
+  &__destroy {
+    margin-right: 50px;
+    font-size: 20px;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(204, 0, 0);
+    border-radius: 10px;
+    &:hover {
+      background-color: rgba(204, 0, 0, 0.495);
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+  }
+  &__btn {
+    height: 70px;
+    line-height: 70px;
+    width: 500px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(204, 0, 0);
+  }
+}
+
+
+// コメント一覧
+.show-comments-box {
+  width: 560px;
+  .show-comments {
+    margin-top: 20px;
+    background-color: white;
+    width: 560px;
+    padding: 20px 40px;
+    height: auto;
+    &__header {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 0.5em 1em;
+      text-align: center;
+      background: -moz-linear-gradient(#bce9f6, #15aef5);
+      background: -webkit-linear-gradient(#bce9f6, #15aef5);
+      background: linear-gradient(to right, #bce9f6, #15aef5);
+      color: #FFF;
+    }
+    .comments__text--text {
+      position: relative;
+      display: inline-block;
+      margin: 5px 30px 5px 30px;
+      padding: 15px 10px;
+      min-width: 120px;
+      max-width: 100%;
+      color: #555;
+      font-size: 18px;
+      background: #e0edff;
+      border-radius: 15px;
+      word-break: break-all;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -25px;
+        margin-top: -15px;
+        border: 15px solid transparent;
+        border-right: 15px solid #e0edff;
+        z-index: 0;
+      }
+    }
+  }
+}
+.comments__text {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  .show-user {
+    font-size: 16px;
+    color: #555;
+    line-height: 100%;
+    text-decoration: none;
+  }
+}
+.fa-clock, time {
+  color: #aaa;
+}
+
+// コメント入力蘭
+.show-comment-form {
+  text-align: center;
+  margin-top: 20px;
+  background-color: white;
+  width: 560px;
+  padding: 20px 40px;
+  height: auto;
+  &__new {
+    width: 480px;
+    &--text {
+      font-size: 16px;
+      padding: 10px;
+      width: 450px;
+      height: 200px;
+    }
+    &--btn {
+      width: 400px;
+      height: 50px;
+      color: white;
+      background-color: #F8D655;
+      margin: 0 10px;
+      margin-top: 20px;
+      border-radius: 40px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+.top-remove {
+  text-align: right;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  margin-top: 20px;
 }

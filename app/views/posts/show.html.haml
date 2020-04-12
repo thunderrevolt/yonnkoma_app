@@ -1,38 +1,52 @@
 .show
   .show-box
-    .show-author
-      投稿者: #{@post.user.name}
-    .show-title
-      タイトル: #{@post.title}
-      タイトル: #{@post.text}
-    .show-img
-      - @post_boards.each do |i|
-        = image_tag i.images.to_s, class: "show-img__img"
-        -# = image_tag i.images.to_s, width: "500px", height: "500px", width: "600px", class: "show-img__img"
-    .show-text
-      説明文: #{@post.text}
-    .comment
-      %p ここからコメント入力できます。
-      - if current_user
-        = form_with model: [@post, @comment], class: "comment-form", local: true do |f|
-          = f.text_area :text, class: "comment-form__area", plsceholder: "コメントする", rows: "2"
-          = f.submit "SEND",class: "comment-form__btn"
-      - else
-        %strong
-          %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
-    - if user_signed_in?
-      - if @post.user_id == current_user.id
-        .product-show-link
-          .product-show-link__edit
-            = link_to edit_post_path(@post), data: {turbolinks: false} do
-              編集
-          .product-show-link__destroy
-            = link_to post_path(@post), method: :delete do
-              削除
-    .comments
-      %h3 コメント一覧
-      - if @comments
-        - @comments.each do |comment|
-          %p.comments__text
-            = link_to comment.user.name, "/users/#{comment.user_id}"
-            = comment.text
+    .show-box-inner
+      -# 投稿者
+      .show-box-inner__author
+        投稿者: #{@post.user.name}
+      -# タイトル
+      .show-box-inner__title
+        タイトル: #{@post.title}
+      -# ４コマ画像
+      .show-box-inner__img
+        - @post_boards.each do |i|
+          = image_tag i.images.to_s, class: "show-box-inner__img--img"
+      -# 説明文
+      .show-box-inner__text
+        説明文: #{@post.text}
+      -# 編集・削除ボタン
+      - if user_signed_in?
+        - if @post.user_id == current_user.id
+          .product-show-link
+            .product-show-link__edit
+              = link_to edit_post_path(@post), data: {turbolinks: false} do
+                編集
+            .product-show-link__destroy
+              = link_to post_path(@post), method: :delete do
+                削除
+      -# コメント一覧
+      .show-comments-box
+        .show-comments
+          %h2.show-comments__header コ  メ  ン  ト  一  覧
+          - if @comments
+            - @comments.each do |comment|
+              .comments__text
+                = link_to comment.user.name, "/users/#{comment.user_id}",class:"show-user"
+                %p.comments__text--text 
+                  = comment.text 
+                  %br
+                  %i.far.fa-clock
+                  %time(datetime="#{comment.created_at}")= time_ago_in_words(comment.created_at)+"前"
+      -# コメント入力
+      .show-comment-form
+        %p ここからコメント入力できます。
+        - if current_user
+          = form_with model: [@post, @comment], class: "show-comment-form__new", local: true do |f|
+            = f.text_area :text, class: "show-comment-form__new--text", plsceholder: "コメントする", rows: "2"
+            = f.submit "SEND",class: "show-comment-form__new--btn"
+        - else
+          %strong
+            %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+        = link_to root_path ,class: 'top-remove' do
+          TOPにもどる
+      
