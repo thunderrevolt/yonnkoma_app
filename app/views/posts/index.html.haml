@@ -18,6 +18,31 @@
         = link_to new_user_registration_path ,class: 'header-top__left--new' do
           新規登録
 .wrapper
+  .swiper-container
+    / 追加で必要なラッパー
+    .swiper-wrapper
+      / Slides
+      - @slide.each do |s|
+        .swiper-slide 
+          .swiper-slide__img
+            = link_to post_path(s.id) do
+              = image_tag s.boards[0].images.to_s, class: 'swiper-slide__img--img', height: "350px"
+          .swiper-slide-right
+            .swiper-slide-right__title
+              = link_to post_path(s.id), class: 'swiper-slide-right__title--title' do
+                #{s.title}
+            .swiper-slide-right__name
+              = link_to "/users/#{s.user.id}", class: 'swiper-slide-right__name--name' do
+                投稿者: #{s.user.name}
+
+      
+    / ページネーション
+    .swiper-pagination
+    / ページネーションbtn
+    .swiper-button-prev
+    .swiper-button-next
+    / scrollbar
+    .swiper-scrollbar
   .main
     .main-contents
       %h1.main-new__title
