@@ -1,10 +1,34 @@
-.user-page
-  %p 
-    = @nickname + "さんの投稿一覧"
-  .user-contents
-    - @posts.each do |post|
-      .user-content
-        .user-content__title
-          = post.title
-        .user-content__text
-          = post.text
+.mypage
+  .mypage__header
+    マイページ
+  .mypage-main
+    .mypage-container
+      %ul.mypage-menu
+        %li.mypage-menu__li
+          #about.mypage-menu_item.mypage-active
+            プロフィール
+        %li.mypage-menu__li
+          #service.mypage-menu_item
+            作品一覧
+        %li.mypage-menu__li
+          #contact.mypage-menu_item
+            お気に入り一覧
+      %ul.mypage-contents
+        %li.mypage-content.mypage-show
+          改装中
+        %li.mypage-content
+          .new-contents
+            - @posts.each do |post|
+              .new-content
+                .new-content__img
+                  = image_tag post.boards[0].images.to_s, width: "200px"
+                .new-content__title
+                  = link_to post_path(post.id), class: 'new-content__title--top' do
+                    タイトル: #{post.title}
+                .new-content__user
+                  = link_to "/users/#{post.user.id}", class: 'new-content__title--top' do
+                    投稿者: #{post.user.name}
+          
+        %li.mypage-content
+          改装中
+
