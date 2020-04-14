@@ -18,10 +18,11 @@ App名 ４コマ
 パスワード aaaaaa (aが6文字)
 
 トップページ
-![画像(ヘッダー)](https://user-images.githubusercontent.com/61190252/79065597-9d376200-7cec-11ea-8450-e284b623caf2.png)
+![画像(ヘッダー)](https://user-images.githubusercontent.com/61190252/79242256-09fa5a00-7eaf-11ea-9ebc-4a2aa781b9b7.png)
+
 
 投稿画面
-![画像(投稿画面)](https://user-images.githubusercontent.com/61190252/79065858-7a0db200-7cee-11ea-8c9a-06405d977184.png)
+![画像(投稿画面)](https://user-images.githubusercontent.com/61190252/79242155-e9ca9b00-7eae-11ea-907d-a8031759d16c.png)
 
 
 
