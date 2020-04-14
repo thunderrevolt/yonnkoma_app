@@ -1,0 +1,65 @@
+.mypage {
+  width: 100%;
+  height: 100vh;
+  background-color: #eee;
+  &__header {
+    color: #41ABEC;
+    font-size: 24px;
+    font-family: "woff2",Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 30px 0;
+  }
+}
+
+.maypage-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mypage-container {
+  background: #dce0e0;
+  width: 1000px;
+  margin: 0 auto;
+}
+.mypage-menu {
+  list-style: none;
+  width: 1000px;
+  display: flex;
+}
+.mypage-menu__li {
+  display: inline-block;
+}
+.mypage-menu__li .mypage-menu_item {
+  display: inline-block;
+  font-size: 14px;
+  width: 333px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+  padding: 7px;
+  color: #333;
+}
+.mypage-menu__li .mypage-active {
+  background: #F8d655;
+  color: #41ABEC;
+  font-weight: bold;
+}
+.mypage-menu li :not(.mypage-active):hover {
+  opacity: 0.5;
+  transition: .8s;
+}
+.mypage-content {
+  list-style: none;
+  font-size: 18px;
+  padding: 7px 10px;
+  line-height: 1.4;
+  background: white;
+  color: #333;
+  min-height: 150px;
+  display: none;
+}
+.mypage-contents .mypage-show {
+  display: block;
+  width: 1000px;
+}

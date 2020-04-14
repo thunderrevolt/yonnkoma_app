@@ -34,8 +34,6 @@
             .swiper-slide-right__name
               = link_to "/users/#{s.user.id}", class: 'swiper-slide-right__name--name' do
                 投稿者: #{s.user.name}
-
-      
     / ページネーション
     .swiper-pagination
     / ページネーションbtn
@@ -43,6 +41,8 @@
     .swiper-button-next
     / scrollbar
     .swiper-scrollbar
+
+    
   .main
     .main-contents
       %h1.main-new__title
