@@ -1,21 +1,25 @@
+= render 'shared/header'
 .mypage
   .mypage__header
-    マイページ
+    #{@user.name}さんのマイページ
   .mypage-main
     .mypage-container
       %ul.mypage-menu
         %li.mypage-menu__li
-          #about.mypage-menu_item.mypage-active
+          .mypage-menu_item.mypage-active
             プロフィール
         %li.mypage-menu__li
-          #service.mypage-menu_item
+          .mypage-menu_item
             作品一覧
         %li.mypage-menu__li
-          #contact.mypage-menu_item
+          .mypage-menu_item
             お気に入り一覧
       %ul.mypage-contents
         %li.mypage-content.mypage-show
-          改装中
+          = simple_format @user.profile
+          - if @user.id == current_user.id
+            = link_to edit_user_registration_path,class: 'user-edit' do
+              アカウント情報編集
         %li.mypage-content
           .new-contents
             - @posts.each do |post|

@@ -1,22 +1,4 @@
-
-.header
-  .header-top
-    .header-top__right
-      = link_to root_path ,class: 'header-top__right--logo' do
-        4コマ
-    .header-top__left
-      - if user_signed_in?
-        = link_to "/users/#{current_user.id}" do
-          マイページ
-        = link_to destroy_user_session_path, method: :delete ,class: 'header-top__left--logout' do
-          ログアウト
-        = link_to new_post_path ,class: 'header-top__left--post' do
-          投稿する
-      - else
-        = link_to new_user_session_path ,class: 'header-top__left--lgn' do
-          ログイン
-        = link_to new_user_registration_path ,class: 'header-top__left--new' do
-          新規登録
+= render 'shared/header'
 .wrapper
   .swiper-container
     / 追加で必要なラッパー
@@ -44,6 +26,7 @@
 
     
   .main
+    -# 新着４コマ一覧
     .main-contents
       %h1.main-new__title
         新着４コマ一覧
@@ -56,7 +39,7 @@
               = link_to post_path(post.id), class: 'new-content__title--top' do
                 タイトル: #{post.title}
             .new-content__user
-              = link_to "/users/#{post.user.id}", class: 'new-content__title--top' do
+              = link_to "/users/#{post.user.id}", class: 'new-content__title--top', data: {turbolinks: false} do
                 投稿者: #{post.user.name}
   - if user_signed_in?
     .post-area

@@ -69,15 +69,15 @@
       display: flex;
       flex-wrap: wrap;
       .new-content {
+        background-color: white;
         height: 250px;
         width: 200px;
-        border: 0.5px solid #999;
-        &__title {
+        margin: 0 20px 20px;
+        box-shadow: 2px 2px 4px gray;
+        &__title--top {
           font-family: Arial, Helvetica, sans-serif;
-        }
-        &__user {
-          font-family: Arial, Helvetica, sans-serif;
-
+          color: #666;
+          padding: 0 10px;
         }
       }
     }

@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   
 
   def index
-    @posts = Post.includes(:user,:boards).limit(10).order("created_at DESC")
+    @posts = Post.includes(:user,:boards).limit(14).order("created_at DESC")
     @slide = Post.includes(:user,:boards).limit(3).order("created_at DESC")
   end
 
