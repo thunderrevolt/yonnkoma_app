@@ -25,7 +25,7 @@
             - @posts.each do |post|
               .new-content
                 .new-content__img
-                  = image_tag post.boards[0].images.to_s, width: "200px"
+                  = image_tag post.boards[0].images.url, width: "200px"
                 .new-content__title
                   = link_to post_path(post.id), class: 'new-content__title--top' do
                     タイトル: #{post.title}

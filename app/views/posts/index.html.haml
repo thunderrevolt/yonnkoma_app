@@ -8,7 +8,7 @@
         .swiper-slide 
           .swiper-slide__img
             = link_to post_path(s.id) do
-              = image_tag s.boards[0].images.to_s, class: 'swiper-slide__img--img', height: "350px"
+              = image_tag s.boards[0].images.url, class: 'swiper-slide__img--img', height: "350px"
           .swiper-slide-right
             .swiper-slide-right__title
               = link_to post_path(s.id), class: 'swiper-slide-right__title--title' do
@@ -34,7 +34,7 @@
         - @posts.each do |post|
           .new-content
             .new-content__img
-              = image_tag post.boards[0].images.to_s, width: "200px"
+              = image_tag post.boards[0].images.url, width: "200px"
             .new-content__title
               = link_to post_path(post.id), class: 'new-content__title--top' do
                 タイトル: #{post.title}
