@@ -5,10 +5,9 @@
         4コマ
     .header-top__left
       - if user_signed_in?
-        = link_to "/users/#{current_user.id}", data: {turbolinks: false} do
+        = link_to "/users/#{current_user.id}",class: 'header-top__left--mypage', data: {turbolinks: false} do
           マイページ
         = link_to destroy_user_session_path, method: :delete ,class: 'header-top__left--logout' do
-
           ログアウト
         = link_to new_post_path ,class: 'header-top__left--post' do
           投稿する
